@@ -118,10 +118,10 @@ const About = () => {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: 'Marcus Thorne', role: 'FullStack Engineer', company: 'Google', icon: 'Brush' },
-              { name: 'Elena Rodriguez', role: 'Software Engineer', company: 'Netflix', icon: 'Code' },
-              { name: 'David Chen', role: 'Product Manager', company: 'Stripe', icon: 'Payments' },
-              { name: 'Sarah Jenkins', role: 'AI Researcher', company: 'OpenAI', icon: 'Smart_Toy' }
+              { name: 'Purushotham M', role: 'FullStack Developer', company: '', icon: 'Brush' },
+              { name: 'Sirisha Kala', role: 'Data Analyst', company: '', icon: 'Code' },
+              { name: 'Ganesh M', role: 'Product Manager', company: '', icon: 'Payments' },
+              { name: 'Syed Munshir', role: ' AI Engineer', company: '', icon: 'Smart_Toy' }
             ].map((mentor, i) => (
               <motion.div key={i} variants={fadeUp} className="group bg-white p-8 rounded-[2rem] border border-gray-100 ambient-shadow hover:-translate-y-2 hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-300">
                 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
