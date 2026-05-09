@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#916f6b",
+                      "on-tertiary-fixed-variant": "#404754",
+                      "surface-tint": "#c00018",
+                      "on-secondary-fixed": "#141b2b",
+                      "secondary-container": "#d9dff5",
+                      "tertiary-fixed-dim": "#c0c7d6",
+                      "surface-container": "#edeeef",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-primary": "#ffb3ac",
+                      "on-primary-container": "#fffbff",
+                      "surface-variant": "#e1e3e4",
+                      "secondary-fixed": "#dce2f7",
+                      "on-tertiary": "#ffffff",
+                      "secondary": "#575e70",
+                      "surface-container-lowest": "#ffffff",
+                      "background": "#f8f9fa",
+                      "outline-variant": "#e6bdb9",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#ffdad6",
+                      "on-surface": "#191c1d",
+                      "surface-bright": "#f8f9fa",
+                      "on-error": "#ffffff",
+                      "tertiary": "#555c6a",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#410003",
+                      "on-primary-fixed-variant": "#930010",
+                      "on-secondary-fixed-variant": "#404758",
+                      "on-secondary-container": "#5c6274",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-surface-variant": "#5d3f3c",
+                      "inverse-on-surface": "#f0f1f2",
+                      "primary-fixed-dim": "#ffb3ac",
+                      "on-tertiary-fixed": "#151c27",
+                      "tertiary-fixed": "#dce2f3",
+                      "tertiary-container": "#6e7583",
+                      "primary-container": "#e2242a",
+                      "inverse-surface": "#2e3132",
+                      "on-background": "#191c1d",
+                      "on-primary": "#ffffff",
+                      "primary": "#bb0017",
+                      "on-tertiary-container": "#fefcff",
+                      "surface-dim": "#d9dadb",
+                      "surface": "#f8f9fa",
+                      "secondary-fixed-dim": "#c0c6db",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "section-padding": "120px",
+                      "gutter": "32px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "stack-sm": "12px",
+                      "container-max": "1280px",
+                      "stack-lg": "48px"
+              },
+              "fontFamily": {
+                      "h2": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "button": ["Inter"],
+                      "h3": ["Inter"],
+                      "h4": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h1": ["Inter"]
+              },
+              "fontSize": {
+                      "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "h3": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "h4": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "h1": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+        .premium-shadow:hover {
+            box-shadow: 0 20px 40px rgba(187, 0, 23, 0.08);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+<!-- TopNavBar -->
+<nav class="bg-white/90 dark:bg-gray-950/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-red-600 dark:text-red-500">SkillXa Technologies</div>
+<div class="hidden md:flex items-center space-x-8 font-inter antialiased text-sm font-medium">
+<a class="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 transition-colors" href="#">Programs</a>
+<a class="text-red-600 dark:text-red-500 border-b-2 border-red-600 pb-1" href="#">About</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 transition-colors" href="#">Career Support</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-button hover:bg-primary transition-all active:scale-95">
+                Apply Now
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Mission Statement -->
+<section class="py-[120px] px-8 bg-white overflow-hidden">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-stack-md">
+<div class="inline-block px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-label-md">OUR MISSION</div>
+<h1 class="font-h1 text-h1 text-on-surface">Helping students become professionals.</h1>
+<p class="text-body-lg font-body-lg text-secondary max-w-lg">
+                        We bridge the gap between academic theory and industry reality. SkillXa is more than an academy; it's a launchpad for the next generation of tech innovators.
+                    </p>
+<div class="flex items-center gap-stack-md pt-stack-sm">
+<div class="flex -space-x-4">
+<img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" data-alt="portrait of a young female professional smiling with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdppcsXnxUK7Ll16MRVVPGhyNICbwVoG5lsmAiYHZlWw5pGHda9r_0ILMSKGgepfJxgcIWiiBPlRAXQWRfAaLHup5LZ-bBhIn-hJWm5R_4nGkjamiqij491eOizO5k4Hnvp8-SmUy9DhttbptzxOcDrgJ5hTDfwVDmwfTH8rJxYKIuPvFq30ugV4Bdwpc3ENJBVPDUfu6WGUikSx0Swx8XGVHi5DHrCDmGKPZLOUGqd28C3HWnULDdUA_NSpg5pJGJX_Fe-kdZCQc"/>
+<img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" data-alt="portrait of a confident male tech professional in a casual setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_pAbloX5uf2IxNHEvAU1vt2LPGCLoRmsKTzyXB10yLtUfcKvotIVPqU_-898wrLXz9PKi5aWzZSOktZTRp269BpzkAJykDztDQiRgEPmJbSVP83OUSHl3R271KHU3iBx1nacMP0Es-NdP6TK6s88pZtYfY3ApHKtK1QDinPIIqBcu037wPq58x4pAPUrXjjXdRaVA8MEAKcEO-s4GdrgJmnAfrIcqMdqT4ryMAhtZ7IXRrMjZr9WwaIAlBPyVXXqHkgAoff9UrSE"/>
+<img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" data-alt="close up headshot of a diverse male student smiling at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo-oYckcLqmiGgJAofEASYT7tZ0GiIvPWYguigdb7GMkb5-BMXslEpBC0pNUdAUa7Ez8QoayU7C5bKk21goCWQuAONvaT__vi8OTOteFhR82k4kKuf0h92VftAhwo34RxNcJ6XG0nASqOnT9s8OEqcH7VoqVUdjCa4LiqmypPkR7nks0dzBn49fWOqM75O4y9-gAr8we-7yRzG05EAZwRh0eSJ75ky7EFnR9H6ET10IvapEzMFDRnQ6TZLcPotG9GKLTB97uZsV7c"/>
+</div>
+<p class="text-label-md text-on-surface-variant font-semibold">Join 5,000+ Alumni</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="group of diverse young professionals working together in a bright modern tech office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnRfIALD1XP0ALfMHma3X_XUvWvXnvEUiaNExiWzaroMb_cQGcpSEEbyDS2GkqY5Uknd2FuyAIFwktHsVBK811jOLmu5E4ozfLixgkG7b4hwFNAaE87FzpE1NsSBLmm5r85IzD5h8AmWbHleVzMYHQ0wPsX64SapDLGVz72etjEgQPdbLAuZkM6Dx8WJCTTC0WDUws1FnYCfJEBD-Tt_Mn94dI76K6jVjU2QuzN02tRc70RY6988vK3A7pj8WLIQmYYlBcCRdhOYk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why SkillXa Exists: Narrative Section -->
+<section class="py-[120px] px-8 bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-5">
+<h2 class="font-h2 text-h2 text-on-surface mb-stack-md">Why SkillXa exists</h2>
+<div class="w-20 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="lg:col-span-7 space-y-stack-md">
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                            The traditional education system was designed for an era that no longer exists. Today, technology evolves faster than curricula can be updated. This creates a "readiness gap" where students graduate with degrees but without the practical skills required by top-tier tech firms.
+                        </p>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                            SkillXa was founded to disrupt this cycle. We believe that true learning happens at the intersection of mentorship and execution. By bringing world-class practitioners into the classroom, we ensure our students are not just learning—they are building their careers from day one.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Section: Bento Grid Layout -->
+<section class="py-[120px] px-8 bg-white">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-h2 text-h2 text-on-surface">Our Vision for Tomorrow</h2>
+<p class="text-body-lg text-secondary mt-4 max-w-2xl mx-auto">Democratizing high-end tech education through three core pillars of excellence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pillar 1 -->
+<div class="bg-surface-container rounded-3xl p-10 flex flex-col justify-between border border-gray-100 premium-shadow transition-all group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-h3 text-h3 mb-4">Hands-on Mastery</h3>
+<p class="text-body-md text-secondary">No fluff. No filler. Our vision focuses on project-based learning where students solve real-world problems for real-world clients.</p>
+</div>
+<div class="mt-12 rounded-xl overflow-hidden aspect-video">
+<img class="w-full h-full object-cover" data-alt="a collaborative workshop setting with students brainstorming on a digital whiteboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDindws_9dNABrhxq5TZy7ZEEVo5b5Ikw_RrUVd7SbokiVzcNPGn53HqA1-MyaQMTSuGB2e6tNCRt2wh2RxEcHB6FRfWo5AuXWS2OB2GZbFdy69yHaL-EL2WQ_5bLnAJOBQEOxUXyasd97DtPPMuLv6mKryPxK5YfovZTExRWKz-1gblkhHJl5AzrUR02Va2O62vw3Vx0_yLda42x2QnRBGqCzBUR5zOb3SbZEF8_fiajTrWDz4TnkcvCCn-zsavzud0CwcKLZyFOQ"/>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-primary text-on-primary rounded-3xl p-10 flex flex-col justify-between premium-shadow transition-all group">
+<div>
+<span class="material-symbols-outlined text-white text-4xl mb-6 block" data-icon="groups">groups</span>
+<h3 class="font-h3 text-h3 mb-4">Network of Experts</h3>
+<p class="text-white/80">Connecting every student with a global network of senior engineers and designers from top Silicon Valley firms.</p>
+</div>
+<div class="mt-12 space-y-4">
+<div class="h-1 bg-white/20 w-full rounded-full">
+<div class="h-1 bg-white w-3/4 rounded-full"></div>
+</div>
+<p class="text-sm font-bold">1,200+ Active Industry Mentors</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container rounded-3xl p-10 flex flex-col justify-between border border-gray-100 premium-shadow transition-all group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-h3 text-h3 mb-4">Career Acceleration</h3>
+<p class="text-body-md text-secondary">Our goal is a 100% placement rate within 3 months of graduation. We don't just teach; we place.</p>
+</div>
+<div class="mt-12 rounded-xl overflow-hidden aspect-video">
+<img class="w-full h-full object-cover" data-alt="modern data visualization dashboard showing growth metrics and career progress" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2q4fdjNFW8UyDQaH_M8ny26M5b85cQ_iHWZ3qYavCvuwSc736cpXAzsgbRXVbLvVYDKdOZOI-dkW0Rcntl2_XiKVLSIPwnEN4H-iW3npyEiRcdN6vUVH8HEBwRvRWNhx8Yc7VFpfNQSmtLNPfO9H781NY_G4rwp_7bg23VLAvjdzl7V1djlBLLscAy4qVxI0PDMttaubDQn9Y6VLfheXSbg2ehWRVnB108mS0pcoOLPkDO4fp88kiW82d1Vv57ADz022WItus-RA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mentor Section -->
+<section class="py-[120px] px-8 bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-gutter">
+<div class="max-w-xl">
+<h2 class="font-h2 text-h2 text-on-surface">Learn from the best</h2>
+<p class="text-body-lg text-secondary mt-4">Our mentors aren't just teachers—they are leaders at companies you use every day.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-button group">
+                        See All Mentors
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Mentor 1 -->
+<div class="bg-white rounded-2xl p-6 border border-gray-100 premium-shadow text-center">
+<div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a male tech lead with short hair and modern glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGlTGjsAT2-mijppRprxAi_U0RiAY81PiOYGUk1GHb-yDG-SZSxVNWmbLYCQxrs0MFgW7ljeFmiInz79jJVZxbAPH6t1NX_B4zFK-Gv8Lm1bVfq5FgXkwa-hoW5GOWSmcbQ1u4YzUnKZ4W2Ig38CZ5gPFXontU47CU8qu5wp0i3Ow5_JNyoL-3o-VsX6Di6YUqykR4gdcoCdiRlm57kPsT_FdOMmfxu3P9FSPL_ty5nG96pceBbURxvBxjbT2uNqteQMe8VbfISjg"/>
+</div>
+<h4 class="font-h4 text-h4 mb-1">Marcus Thorne</h4>
+<p class="text-label-md text-primary mb-4">Senior UX Designer @ Google</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">User Research</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">Figma</span>
+</div>
+</div>
+<!-- Mentor 2 -->
+<div class="bg-white rounded-2xl p-6 border border-gray-100 premium-shadow text-center">
+<div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="cheerful woman with curly hair looking directly at camera, professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdw5BeclxTJ5myfgIP1UT01uf3JbbgxfbjgVpNPM-9Se5_jicpqsKMlrx3bBlkqeXdsGug6EWIE6fiGHZ6Awj0IHL_WODbRT1RKVXIM9qSgzGAsxEGajFwAKXbo8fL6oyKcpHaToS5aUNL6QYXm26NBfAlUn_gYiZOF7LYDceKwFyol5seOG9DkX0z-jIhoCvMFPcV1xuLJuPwfuQ_dao35i7uKNgCF1FOYCxoEX2DcKcEbPLZRSx_T89-_Lboq8VHTjOqiQg4j0A"/>
+</div>
+<h4 class="font-h4 text-h4 mb-1">Elena Rodriguez</h4>
+<p class="text-label-md text-primary mb-4">Staff Engineer @ Netflix</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">React</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">System Design</span>
+</div>
+</div>
+<!-- Mentor 3 -->
+<div class="bg-white rounded-2xl p-6 border border-gray-100 premium-shadow text-center">
+<div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="man in business casual attire smiling confidently in an office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDageWeSuokPH_zqZrZVhBrdOmFk-Bpix2KyQvkPxQ5iwqxtXHgY2KqLxp1EV6cxlrzCcRPGOj908K1fTzTBThH_ZOIlSWzyzQeBeMkfNQ1yleOfce92HdgHmDtFS3b-JwbZo0xwFcfGA3Ok47CT-MfPBUUZHbToMYHEfmva_iWz9atadyIA-b2CUBCR_oCGjJQcX_ZRoprl8nPJfnm9aKvKzB2Pg6V8TaUirbzix2hj1hWNWIif6aQKJIo42E3Iu_pUqLo-L_K38s"/>
+</div>
+<h4 class="font-h4 text-h4 mb-1">David Chen</h4>
+<p class="text-label-md text-primary mb-4">Product Manager @ Stripe</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">Agile</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">FinTech</span>
+</div>
+</div>
+<!-- Mentor 4 -->
+<div class="bg-white rounded-2xl p-6 border border-gray-100 premium-shadow text-center">
+<div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="professional female software engineer in a modern workplace setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKVxafAnjHyaBksZvzjN-h5VEnnzSBgB2QzYByuuVt0d6rWiN2VR4QYHcoLCF2sto7C43zpSiW8h3T4GekvR8Vij0QQza2P_8kl-Gl9Y6TaNjFpwMA3kQjdF2KmxVe6wYV09ZOSGPAmx5wT-VspbZdDQIGJ7CscG13AmiaY4YYYCPfV7mjEcmlGiBK-Bmwlg0dmhJKlOvx2i_wdGWswFByIWC7mDiglX5s3Ndrp1ZSrBpmbYput9WhaRczXBjLlOgUXno_xdfadjw"/>
+</div>
+<h4 class="font-h4 text-h4 mb-1">Sarah Jenkins</h4>
+<p class="text-label-md text-primary mb-4">AI Researcher @ OpenAI</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">Python</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold">LLMs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-[120px] px-8 bg-primary">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center text-on-primary">
+<div class="space-y-2">
+<div class="text-5xl font-black">94%</div>
+<p class="text-label-md opacity-80 uppercase tracking-widest">Job Placement</p>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-black">500+</div>
+<p class="text-label-md opacity-80 uppercase tracking-widest">Hiring Partners</p>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-black">4.9/5</div>
+<p class="text-label-md opacity-80 uppercase tracking-widest">Student Rating</p>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-black">15+</div>
+<p class="text-label-md opacity-80 uppercase tracking-widest">Tech Domains</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-900 w-full py-16 px-8 border-t border-gray-200 dark:border-gray-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1280px] mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="text-xl font-bold text-gray-900 dark:text-white mb-6">SkillXa</div>
+<p class="font-inter text-sm text-gray-500 dark:text-gray-400 max-w-sm">
+                        © 2024 SkillXa Technologies. Empowering the next generation of tech leaders through industry-led education and career coaching.
+                    </p>
+</div>
+<div>
+<h5 class="font-bold text-on-surface mb-6">Company</h5>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="font-inter text-sm text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Terms of Service</a></li>
+<li><a class="font-inter text-sm text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-on-surface mb-6">Support</h5>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">FAQ</a></li>
+<li><a class="font-inter text-sm text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Support</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

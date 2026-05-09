@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillXa | Where Students Become Professionals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#916f6b",
+                    "on-tertiary-fixed-variant": "#404754",
+                    "surface-tint": "#c00018",
+                    "on-secondary-fixed": "#141b2b",
+                    "secondary-container": "#d9dff5",
+                    "tertiary-fixed-dim": "#c0c7d6",
+                    "surface-container": "#edeeef",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-primary": "#ffb3ac",
+                    "on-primary-container": "#fffbff",
+                    "surface-variant": "#e1e3e4",
+                    "secondary-fixed": "#dce2f7",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#575e70",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9fa",
+                    "outline-variant": "#e6bdb9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffdad6",
+                    "on-surface": "#191c1d",
+                    "surface-bright": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "tertiary": "#555c6a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#410003",
+                    "on-primary-fixed-variant": "#930010",
+                    "on-secondary-fixed-variant": "#404758",
+                    "on-secondary-container": "#5c6274",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-surface-variant": "#5d3f3c",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary-fixed-dim": "#ffb3ac",
+                    "on-tertiary-fixed": "#151c27",
+                    "tertiary-fixed": "#dce2f3",
+                    "tertiary-container": "#6e7583",
+                    "primary-container": "#e2242a",
+                    "inverse-surface": "#2e3132",
+                    "on-background": "#191c1d",
+                    "on-primary": "#ffffff",
+                    "primary": "#bb0017",
+                    "on-tertiary-container": "#fefcff",
+                    "surface-dim": "#d9dadb",
+                    "surface": "#f8f9fa",
+                    "secondary-fixed-dim": "#c0c6db",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "section-padding": "120px",
+                    "gutter": "32px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "stack-sm": "12px",
+                    "container-max": "1280px",
+                    "stack-lg": "48px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "button": ["Inter"],
+                    "h3": ["Inter"],
+                    "h4": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "h3": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h4": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .ambient-shadow:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        .red-glow-hover:hover {
+            box-shadow: 0 10px 25px rgba(187, 0, 23, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 border-b border-gray-100 bg-white/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-red-600">SkillXa Technologies</div>
+<div class="hidden md:flex items-center space-gap-gutter gap-8">
+<a class="font-inter antialiased text-sm font-medium text-red-600 border-b-2 border-red-600 pb-1" href="#">Programs</a>
+<a class="font-inter antialiased text-sm font-medium text-gray-600 hover:text-red-600 transition-colors" href="#">About</a>
+<a class="font-inter antialiased text-sm font-medium text-gray-600 hover:text-red-600 transition-colors" href="#">Career Support</a>
+<a class="font-inter antialiased text-sm font-medium text-gray-600 hover:text-red-600 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-button text-button px-8 py-3 rounded-lg red-glow-hover transition-all duration-200 active:scale-95">
+                Apply Now
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center pt-24 pb-32 px-8 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary to-transparent blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-primary to-transparent blur-3xl"></div>
+</div>
+<div class="max-w-[1280px] mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
+<div class="space-y-stack-lg">
+<div class="inline-flex gap-2 flex-wrap">
+<span class="bg-surface-container-high px-4 py-1.5 rounded-full font-label-md text-label-md text-primary">3 Months</span>
+<span class="bg-surface-container-high px-4 py-1.5 rounded-full font-label-md text-label-md text-primary">9 Domains</span>
+<span class="bg-surface-container-high px-4 py-1.5 rounded-full font-label-md text-label-md text-primary">6+ Certificates</span>
+<span class="bg-surface-container-high px-4 py-1.5 rounded-full font-label-md text-label-md text-primary">100% Online</span>
+</div>
+<h1 class="font-h1 text-h1 tracking-tighter leading-none">
+                        Where Students Become <br/>
+<span class="text-primary">Professionals</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-lg">
+                        3-Month Online Internship Program with 9 In-Demand Tech Domains. Bridging the gap between academic learning and industry excellence.
+                    </p>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary font-button text-button h-[56px] px-10 rounded-lg red-glow-hover transition-all flex items-center gap-2 group">
+                            Apply Now
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="border border-gray-200 h-[56px] px-10 rounded-lg font-button text-button hover:bg-surface-container-low transition-all">
+                            View Programs
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="bg-surface-container-highest rounded-3xl overflow-hidden shadow-2xl relative aspect-video md:aspect-[4/3]">
+<img class="w-full h-full object-cover" data-alt="A high-quality photograph of a diverse group of happy, motivated young adult students collaborating in a modern, sunlit tech office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIG4FZPKTGe38-sOImcduxCHCweZMkXezT_uszoJTrTYA6sZ1z40MWZKqh_jOmZ1En3P1AKIjbRlWQTgW1GfnNHzkY_fi2AXRVKTbYUjW2ggiUSTH-LqHkdQ2cnKljoVAed0SKNrQgZtqdhLv-vH8exlAWRZwxXR-oA1V1Kk6A_0gLrnInhIMfOyn80tJI2OhRBT3QFKh_VpX3H9TFdVN7lhzbm-Du1ruyVKalhg28z6VT8nDNv6emymmNzx1tujW4PM5dK3y9chc"/>
+<div class="absolute bottom-8 left-8 bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-gray-100 shadow-lg"><p class="text-gray-600 font-label-md mb-2">Next Batch Starts</p><p class="text-primary font-h4 text-h4">October 15, 2024</p></div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-primary rounded-2xl -z-10 rotate-12 opacity-20"></div>
+<div class="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-primary rounded-full -z-10 opacity-20"></div>
+</div>
+</div>
+</section>
+<!-- Trusted Strip -->
+<section class="bg-white border-y border-gray-100 py-12">
+<div class="max-w-[1280px] mx-auto px-8 flex flex-wrap justify-between gap-gutter">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="laptop_mac">laptop_mac</span>
+<span class="font-label-md uppercase tracking-widest text-secondary">100% Online</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="school">school</span>
+<span class="font-label-md uppercase tracking-widest text-secondary">No Experience Needed</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-label-md uppercase tracking-widest text-secondary">Live Projects</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="work">work</span>
+<span class="font-label-md uppercase tracking-widest text-secondary">Career Support</span>
+</div>
+</div>
+</section>
+<!-- About / Launchpad -->
+<section class="py-[120px] px-8 bg-surface">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="text-primary font-label-md uppercase tracking-widest mb-4 block">The Launchpad Advantage</span>
+<h2 class="font-h2 text-h2 mb-6">Designed to propel your tech journey</h2>
+<p class="font-body-lg text-body-lg text-secondary">SkillXa isn't just an internship; it's a simulated professional environment where students tackle real-world problems with industry-standard tools.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Live Projects Card -->
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-transparent hover:border-primary/20 transition-all flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-high rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="account_tree">account_tree</span>
+</div>
+<h4 class="font-h4 text-h4 mb-4">Live Projects</h4>
+<p class="text-secondary body-md">Work on production-grade applications that actually matter in the real world.</p>
+</div>
+<!-- Daily Training Card -->
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-transparent hover:border-primary/20 transition-all flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-high rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="timer">timer</span>
+</div>
+<h4 class="font-h4 text-h4 mb-4">Daily Training</h4>
+<p class="text-secondary body-md">Intensive daily sessions covering core concepts and advanced industry practices.</p>
+</div>
+<!-- Portfolio Building Card -->
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-transparent hover:border-primary/20 transition-all flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-high rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="draw">draw</span>
+</div>
+<h4 class="font-h4 text-h4 mb-4">Portfolio Building</h4>
+<p class="text-secondary body-md">Curate a stunning professional portfolio that commands attention from recruiters.</p>
+</div>
+<!-- Mentor Support Card -->
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-transparent hover:border-primary/20 transition-all flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-high rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<h4 class="font-h4 text-h4 mb-4">Mentor Support</h4>
+<p class="text-secondary body-md">One-on-one guidance from seniors currently working at top tier tech giants.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Domains Grid (Bento Style) -->
+<section class="py-[120px] px-8 bg-white overflow-hidden">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-h2 text-h2 mb-4">Explore 9 Tech Domains</h2>
+<p class="font-body-lg text-body-lg text-secondary">Specialized paths designed for every interest in the digital ecosystem.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- AI/ML -->
+<div class="col-span-2 row-span-2 group relative overflow-hidden rounded-3xl bg-surface-container h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Futuristic neural network visualization with neon blue and red data points glowing in dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTEkDVPA6SLJkdOaIgIRqhaCAbvsr8fnCB-KJfhzjgj4dHP-pxrDr5fOHS22fuZY0EK7qS5EAgQXbPSTAT9ms6qSFcv2pIKfT8lBn-sCitYpY7Q5T5ToBaSx6WxjxFZh1KVmwKIKVtZAoTpOXpFcWdORG_DjK4Ywd-j4sDVO45lXzNczpN0MHuOdW0Njaba5myns8VLS7u4jIVZIOZ9zkX2B0csJVc_l91KZTqXi9AqsZp-YIO1V4_FhVbHVxwTWT5bdJ3dU6iFnA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+<span class="text-white/60 font-label-md mb-2">HOT TREND</span>
+<h3 class="text-white font-h3 text-h3 mb-2">AI / ML</h3>
+<p class="text-white/80 text-sm">Build predictive models and neural networks.</p>
+</div>
+</div>
+<!-- Fullstack -->
+<div class="col-span-2 group relative overflow-hidden rounded-3xl bg-surface-container h-[188px]">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of developer hands coding on a laptop with clean minimalist workspace aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7XcY1dV9YrWeCi2SCyqAwsTV9E5tedFxmqBLVz2ICtbCWfWsnseL0vkyJ8aWkADVZCSzTowMWxOH6G0X_ViCI3-aFcIvul0pB9BVZShLYYAg7YQWOhtt7pjBZ6Go8oja6agEtwsPqjQSLGn2p7EUxaiaqt2obLnqJfjoevilEDngGHayEYbg5xtcs8lOsrDY4my9BLKjwIzZVpLXhjvTdUngVO_fCwwBKKMwUYAtD8BFKh_QoNBj-nwLn1cCjDp8R-nqq8tFwsg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+<h3 class="text-white font-h4 text-h4">Fullstack Dev</h3>
+</div>
+</div>
+<!-- UI/UX -->
+<div class="col-span-2 group relative overflow-hidden rounded-3xl bg-surface-container h-[188px]">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Sleek UI design process on a large monitor with vibrant color palettes and wireframes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi5eyDlq1d1CHXtE3LyKlxuECfJfQJUCYZlFl44-qaZHSyHrbPo5-CRsiPOdYn2VbvLCD_E89brmDOHcT3F7T0FjzBeNvS2CLs18_3V9AgFnVHCJUyxA26IlA3ZhU94vt1J0TInJ3xDnd5oVpQbYChcoHpQyHVoQs7pqCgCtZzwPaWvxuKXhhdoQ4N4ZY_lGlHBMjcHkzkKAA_CzavQK5WfuZnr6e2xzgMlcA_xUFQyR8SAN_VSb1HpaIKUOk3GJOLn8Ku8ruj5fA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+<h3 class="text-white font-h4 text-h4">UI/UX Design</h3>
+</div>
+</div>
+<!-- Small Tiles -->
+<div class="group p-6 rounded-2xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl mb-4" data-icon="database">database</span>
+<h4 class="font-label-md group-hover:text-white">Data Analyst</h4>
+</div>
+<div class="group p-6 rounded-2xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl mb-4" data-icon="settings_ethernet">settings_ethernet</span>
+<h4 class="font-label-md group-hover:text-white">Backend</h4>
+</div>
+<div class="group p-6 rounded-2xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl mb-4" data-icon="terminal">terminal</span>
+<h4 class="font-label-md group-hover:text-white">Frontend</h4>
+</div>
+<div class="group p-6 rounded-2xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl mb-4" data-icon="cloud">cloud</span>
+<h4 class="font-label-md group-hover:text-white">Cloud</h4>
+</div>
+<div class="group p-6 rounded-2xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl mb-4" data-icon="security">security</span>
+<h4 class="font-label-md group-hover:text-white">Cyber Security</h4>
+</div>
+<div class="group p-6 rounded-2xl bg-surface-container-low hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl mb-4" data-icon="smartphone">smartphone</span>
+<h4 class="font-label-md group-hover:text-white">Mobile App</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- 3-Month Journey Timeline -->
+<section class="py-[120px] px-8 bg-surface">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-20">
+<span class="text-primary font-label-md uppercase tracking-widest mb-4 block">The Roadmap</span>
+<h2 class="font-h2 text-h2">Your 90-Day Transformation</h2>
+</div>
+<div class="relative">
+<!-- Connector Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+<!-- Phase 1 -->
+<div class="bg-white p-8 rounded-3xl ambient-shadow border border-gray-100 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-h4 text-h4 mb-6 shadow-lg shadow-red-200">01</div>
+<h4 class="font-h4 text-h4 mb-4">Deep Learning</h4>
+<p class="text-secondary font-body-md">Month 1: Mastering core foundations with daily live sessions and coding workshops.</p>
+</div>
+<!-- Phase 2 -->
+<div class="bg-white p-8 rounded-3xl ambient-shadow border border-gray-100 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-h4 text-h4 mb-6 shadow-lg shadow-red-200">02</div>
+<h4 class="font-h4 text-h4 mb-4">Project Building</h4>
+<p class="text-secondary font-body-md">Month 2: Applying knowledge to actual business problems and building full-scale projects.</p>
+</div>
+<!-- Phase 3 -->
+<div class="bg-white p-8 rounded-3xl ambient-shadow border border-gray-100 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-h4 text-h4 mb-6 shadow-lg shadow-red-200">03</div>
+<h4 class="font-h4 text-h4 mb-4">Career Prep</h4>
+<p class="text-secondary font-body-md">Month 3: Mock interviews, portfolio refinement, and placement assistance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Program Outcomes (Existing) -->
+<section class="py-[120px] px-8 bg-white">
+<div class="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-h2 text-h2 mb-8">What You Graduate With</h2>
+<div class="space-y-6">
+<div class="flex gap-6 items-start">
+<div class="mt-1 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+</div>
+<div>
+<h4 class="font-h4 text-h4 text-base mb-1">Industry Certificates</h4>
+<p class="text-secondary">Official certification recognized by top tech companies worldwide.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="mt-1 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+</div>
+<div>
+<h4 class="font-h4 text-h4 text-base mb-1">Letter of Recommendation</h4>
+<p class="text-secondary">Earn an LOR based on your performance during the live projects.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="mt-1 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="folder_special">folder_special</span>
+</div>
+<div>
+<h4 class="font-h4 text-h4 text-base mb-1">Project Experience</h4>
+<p class="text-secondary">A robust GitHub profile filled with industry-grade code repositories.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-3xl p-12 relative">
+<img class="w-full h-auto rounded-xl shadow-xl" data-alt="Happy young professional receiving a digital certificate with modern tech office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2a2meuHGL-O0VdNiMHMW2bcBsExWyX9RLL7MNteQ9qFv8YFGC5cq7qLbsNyaxEVwEQHgji5NGTgjRUf5Q5lvzVL1CdOnGYyWb8OaBAIREahP5a-oObeCUW6gU--CVyZM2IzqCpjBvkda2E1rha7SezfxB7g9BLGm9eNPUdT69N17aHiq_skUR2ZhQ8pVFq3unTUdfUKVzjjls2Ksi_cxrpnpQv3yg4KGuc4DyAmraVgo0lX88u_J6akz6LfxmP4TjR3visIOG110"/>
+<div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-xs">
+<div class="flex items-center gap-4 mb-3">
+<div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="check" data-weight="fill">check</span>
+</div>
+<span class="font-label-md">Outcome Verified</span>
+</div>
+<p class="text-sm text-secondary italic">"The LOR from SkillXa helped me land my first Junior Dev role in just 2 weeks!" - Arjun K.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 1. Features Section ("What You Get") -->
+<section class="py-[120px] px-8 bg-surface">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-label-md uppercase tracking-widest mb-4 block">The Package</span>
+<h2 class="font-h2 text-h2 mb-4">What You Get</h2>
+<p class="font-body-lg text-body-lg text-secondary">A comprehensive learning ecosystem designed for your success.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-gray-100 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="live_tv">live_tv</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">Daily Live Classes</h4>
+<p class="text-secondary text-sm">Interactive real-time sessions with industry experts.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-gray-100 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">Doubt Solving</h4>
+<p class="text-secondary text-sm">Instant support to clear technical roadblocks anytime.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-gray-100 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">1-on-1 Mentorship</h4>
+<p class="text-secondary text-sm">Personalized guidance tailored to your career goals.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-gray-100 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="integration_instructions">integration_instructions</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">Unique Projects</h4>
+<p class="text-secondary text-sm">Build original, complex projects that stand out.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-gray-100 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">Resume + Interview</h4>
+<p class="text-secondary text-sm">Professional resume building and mock interview rounds.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-gray-100 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">Portfolio Website</h4>
+<p class="text-secondary text-sm">A custom-built site to showcase your professional work.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl ambient-shadow border border-gray-100 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">AI Tools Training</h4>
+<p class="text-secondary text-sm">Mastering the latest AI workflows to boost productivity.</p>
+</div>
+<div class="bg-primary/5 p-8 rounded-2xl border border-dashed border-primary/30 flex flex-col group">
+<div class="w-full text-left">
+<div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<h4 class="font-h4 text-lg font-bold mb-2">Mock Interview</h4>
+<p class="text-secondary text-sm leading-relaxed">
+        One-on-one simulated interviews with industry experts to boost your confidence and performance.
+    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Outcomes Section ("What Students Earn") -->
+<section class="py-[120px] px-8 bg-white">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-label-md uppercase tracking-widest mb-4 block">Proven Results</span>
+<h2 class="font-h2 text-h2 mb-4">What Students Earn</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 shrink-0 bg-white shadow-md border border-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-h4 text-base font-bold mb-2">Internship Certificate</h4>
+<p class="text-secondary text-sm leading-relaxed">Recognized industry-standard certification of completion.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 shrink-0 bg-white shadow-md border border-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="bar_chart">bar_chart</span>
+</div>
+<div>
+<h4 class="font-h4 text-base font-bold mb-2">Performance Card</h4>
+<p class="text-secondary text-sm leading-relaxed">Detailed evaluation of your technical and soft skills.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 shrink-0 bg-white shadow-md border border-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="web">web</span>
+</div>
+<div>
+<h4 class="font-h4 text-base font-bold mb-2">Portfolio Website</h4>
+<p class="text-secondary text-sm leading-relaxed">A live URL showcasing your projects to recruiters.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 shrink-0 bg-white shadow-md border border-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="badge">badge</span>
+</div>
+<div>
+<h4 class="font-h4 text-base font-bold mb-2">Mock Interview Cert</h4>
+<p class="text-secondary text-sm leading-relaxed">Proof of readiness for professional technical interviews.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 shrink-0 bg-white shadow-md border border-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="approval">approval</span>
+</div>
+<div>
+<h4 class="font-h4 text-base font-bold mb-2">LOR (Letter of Rec)</h4>
+<p class="text-secondary text-sm leading-relaxed">Verified recommendation from industry professionals.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start p-6 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 shrink-0 bg-white shadow-md border border-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="rocket">rocket</span>
+</div>
+<div>
+<h4 class="font-h4 text-base font-bold mb-2">Project Experience</h4>
+<p class="text-secondary text-sm leading-relaxed">Tangible work experience on real-world deployments.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Why Choose SkillXa -->
+<section class="py-[120px] px-8 bg-surface">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-h2 text-h2 mb-8">Why Choose SkillXa</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-12">We focus on what actually matters in the job market, bypassing traditional academic fluff to get you hired.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-white rounded-2xl ambient-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span>
+</div>
+<h4 class="font-bold">No experience needed</h4>
+<p class="text-secondary text-sm">We start from the absolute basics and build up.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-white rounded-2xl ambient-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+</div>
+<h4 class="font-bold">Unique projects</h4>
+<p class="text-secondary text-sm">Original repositories, not just copied code tutorials.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-white rounded-2xl ambient-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+</div>
+<h4 class="font-bold">Strong mentorship</h4>
+<p class="text-secondary text-sm">Learn from seniors at Fortune 500 tech companies.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-white rounded-2xl ambient-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="ads_click">ads_click</span>
+</div>
+<h4 class="font-bold">Career-focused</h4>
+<p class="text-secondary text-sm">Everything we teach is aimed at your first paycheck.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="bg-primary/5 rounded-[40px] p-8">
+<img class="w-full h-auto rounded-3xl ambient-shadow" data-alt="Modern collaborative workspace with young developers discussing code on monitors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7XcY1dV9YrWeCi2SCyqAwsTV9E5tedFxmqBLVz2ICtbCWfWsnseL0vkyJ8aWkADVZCSzTowMWxOH6G0X_ViCI3-aFcIvul0pB9BVZShLYYAg7YQWOhtt7pjBZ6Go8oja6agEtwsPqjQSLGn2p7EUxaiaqt2obLnqJfjoevilEDngGHayEYbg5xtcs8lOsrDY4my9BLKjwIzZVpLXhjvTdUngVO_fCwwBKKMwUYAtD8BFKh_QoNBj-nwLn1cCjDp8R-nqq8tFwsg"/>
+</div>
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary opacity-5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-[120px] px-8">
+<div class="max-w-[1280px] mx-auto bg-primary rounded-[40px] p-16 text-center text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-h2 text-h2 mb-6 text-white">Start Your Tech Career Today</h2>
+<p class="font-body-lg text-body-lg mb-10 text-white/80">Don't wait for opportunities. Build the skills that make you irresistible to recruiters.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-primary font-button text-button h-[64px] px-12 rounded-full hover:bg-gray-100 transition-all active:scale-95 shadow-xl">
+                            Apply for Internship
+                        </button>
+<button class="border-2 border-white/30 text-white font-button text-button h-[64px] px-12 rounded-full hover:bg-white/10 transition-all active:scale-95">
+                            Talk to Advisor
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-900 w-full py-16 px-8 border-t border-gray-200 dark:border-gray-800">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-gray-900 dark:text-white mb-6">SkillXa</div>
+<p class="font-inter text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    SkillXa Technologies. Empowering the next generation of tech leaders through immersive, project-based training.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Programs</h4>
+<ul class="space-y-4 font-inter text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-red-600 transition-colors" href="#">Web Development</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">Data Science</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">UI/UX Design</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">Cyber Security</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4 font-inter text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-red-600 transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">Support</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-gray-900 dark:text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4 font-inter text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-red-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-red-600 transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-inter text-sm text-gray-500 dark:text-gray-400">
+                © 2024 SkillXa Technologies. Empowering the next generation of tech leaders.
+            </p>
+<div class="flex gap-6">
+<a class="text-gray-400 hover:text-red-600 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-gray-400 hover:text-red-600 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+<a class="text-gray-400 hover:text-red-600 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="chat">chat</span></a>
+</div>
+</div>
+</footer>
+</body></html>
